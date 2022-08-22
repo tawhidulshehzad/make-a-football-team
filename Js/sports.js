@@ -1,3 +1,4 @@
+// For selecting best five
 const playerArray = [];
 
 function getPlayer(player) {
@@ -20,6 +21,7 @@ function getPlayer(player) {
   }
 }
 
+// For Button Disable
 function DisableNextButton(btnId) {
   const disableButton = document.getElementById(btnId);
   document.getElementById(btnId).disabled = "true";
@@ -35,7 +37,8 @@ function playeradd(elemenButton) {
   DisableNextButton(playerId);
 }
 
-// Budget calculation starts
+// Budget calculation sidebar second starts
+
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerFunction = getFieldValue("per-player-field");
   const playerListLength = document.getElementById("player-list");
@@ -45,7 +48,7 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const playerExpense = document.getElementById("player-expenses");
   playerExpense.innerText = playerPrice;
 });
-
+// button total
 document
   .getElementById("calculate-total")
   .addEventListener("click", function () {
