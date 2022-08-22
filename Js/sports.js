@@ -1,11 +1,8 @@
-// Budget Calculations sidebar
-function getFieldValue(elemenID) {
-  const perPlayerField = document.getElementById(elemenID);
-  const perPlayerFieldInner = perPlayerField.value;
-  const perPlayerFieldFloat = parseFloat(perPlayerFieldInner);
-  return perPlayerFieldFloat;
+function playeradd() {
+  console.log("click");
 }
 
+// Budget calculation starts
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerFunction = getFieldValue("per-player-field");
   const playerPrice = perPlayerFunction * 5;
@@ -24,5 +21,6 @@ document
     const calculateTotalCost =
       managerFieldValue + coachFieldValue + getPlayerExpenseFloat;
     // final TotalCost
-    
+    const finalTotalCost = document.getElementById("final-total");
+    finalTotalCost.innerText = calculateTotalCost;
   });
