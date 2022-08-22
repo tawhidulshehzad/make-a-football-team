@@ -31,7 +31,6 @@ function playeradd(elemenButton) {
   const playerId = elemenButton.id;
   const playerObj = { playerName: playerName };
   playerArray.push(playerObj);
-  // console.log(playerArray);
   getPlayer(playerArray);
   DisableNextButton(playerId);
 }
