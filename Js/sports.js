@@ -1,21 +1,39 @@
 const playerArray = [];
 
 function getPlayer(player) {
-  console.log(player);
+  // console.log(player);
+  const tableBody = document.getElementById("player-list");
+  tableBody.innerHTML = "";
+  for (let i = 0; i < player.length; i++) {
+    if (i < 5) {
+      const pName = playerArray[i].playerName;
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+      <th>${i + 1}</th>
+      <td>${pName}</td>
+    `;
+      tableBody.appendChild(tr);
+    } else {
+      return alert("You can not add more than five players");
+    }
+  }
+}
+
+function DisableNextButton(btnId) {
+  const disableButton = document.getElementById(btnId);
+  document.getElementById(btnId).disabled = "true";
+  disableButton.style.background = "gray";
 }
 
 function playeradd(elemenButton) {
-  // console.log(elemenButton.parentNode.children);
-  // console.log(elemenButton.parentNode.children[0].innerText);
-  // console.log(elemenButton.parentNode.children[1]);
-
   const playerName = elemenButton.parentNode.children[0].innerText;
-  // console.log(playerName);
+  const playerId = elemenButton.id;
   const playerObj = { playerName: playerName };
-
   playerArray.push(playerObj);
   // console.log(playerArray);
   getPlayer(playerArray);
+  DisableNextButton(playerId);
 }
 
 // Budget calculation starts
