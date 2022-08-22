@@ -11,7 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>FootBall Team</title>
+    <title>Make Your Best Team</title>
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body class="bg-dark">
@@ -57,7 +57,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">Mitchell Starc</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">2000 Run : 200 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -74,7 +74,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">David Warner</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">3000 Run : 100 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -91,7 +91,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">Steve Smith</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">6000 Run : 600 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -108,7 +108,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">Mitchell Johnson</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">8000 Run : 200 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -125,7 +125,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">Brate Lee</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">8000 Run : 800 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -142,7 +142,7 @@
                   />
                   <div class="card-body text-white bg-card rounded">
                     <h5 class="card-title">Shane Warne</h5>
-                    <p class="card-text">1000 Run : 500 Wicket</p>
+                    <p class="card-text">5000 Run : 400 Wicket</p>
                     <button class="w-75 button-background text-white rounded">
                       SECLECT
                     </button>
@@ -157,25 +157,32 @@
                 Selected-V
               </h4>
             </div>
+            <!-- =======
+              Budget Start
+                ===== -->
             <div class="sidebar-list mt-3 text-center sidebar-height">
               <h4 class="text-white text-center sidebar-fst mt-2 p-2">
                 Budget
               </h4>
               <h6 class="text-white">Per player</h6>
-              <input class="w-50 m-2" type="text" />
+              <input id="per-player-field" class="w-50 m-2" type="text" />
               <button
+                id="btn-calculate"
                 class="button-background text-white w-75 rounded-3 p-1 mt-2"
               >
                 Calculate
               </button>
-              <p class="text-white mt-3">Player Expenses $<span>5000</span></p>
+              <p class="text-white mt-3">
+                Player Expenses $<span id="player-expenses">5000</span>
+              </p>
               <h6 class="text-white">Manager</h6>
-              <input class="w-50 m-2" type="text" />
+              <input id="manager-field" class="w-50 m-2" type="text" />
               <div>
                 <h6 class="text-white">Coach</h6>
-                <input class="w-50 m-2" type="text" />
+                <input id="coach-field" class="w-50 m-2" type="text" />
               </div>
               <button
+                id="calculate-total"
                 class="button-background text-white w-75 rounded-3 p-1 mt-2"
               >
                 Calculate Total
@@ -184,7 +191,7 @@
             </div>
           </div>
         </div>
-        <!--====== Side bar star==== -->
+        <!--====== Side bar end==== -->
       </section>
       <div class="text-white p-3">
         <hr />
@@ -197,6 +204,7 @@
       </footer>
     </main>
     <!-- Additional Files -->
+    <script src="Js/sports.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -204,7 +212,7 @@
     ></script>
   </body>
 </html>
-<!-- <section class="mt-5">
+<section class="mt-5">
   <div class="cl-9">
     <div class="row g-2">
       <div class="col-3">
@@ -230,4 +238,4 @@
     </div>
   </div>
   <div class="3"></div>
-</section> -->
+</section>
