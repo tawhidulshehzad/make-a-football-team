@@ -1,5 +1,21 @@
-function playeradd() {
-  console.log("click");
+const playerArray = [];
+
+function getPlayer(player) {
+  console.log(player);
+}
+
+function playeradd(elemenButton) {
+  // console.log(elemenButton.parentNode.children);
+  // console.log(elemenButton.parentNode.children[0].innerText);
+  // console.log(elemenButton.parentNode.children[1]);
+
+  const playerName = elemenButton.parentNode.children[0].innerText;
+  // console.log(playerName);
+  const playerObj = { playerName: playerName };
+
+  playerArray.push(playerObj);
+  // console.log(playerArray);
+  getPlayer(playerArray);
 }
 
 // Budget calculation starts
