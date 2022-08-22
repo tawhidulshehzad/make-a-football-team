@@ -38,7 +38,10 @@ function playeradd(elemenButton) {
 // Budget calculation starts
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerFunction = getFieldValue("per-player-field");
-  const playerPrice = perPlayerFunction * 5;
+  const playerListLength = document.getElementById("player-list");
+  const playerListChild = playerListLength.children.length;
+  const playerListChildFloat = parseFloat(playerListChild);
+  const playerPrice = playerListChildFloat * perPlayerFunction;
   const playerExpense = document.getElementById("player-expenses");
   playerExpense.innerText = playerPrice;
 });
