@@ -16,7 +16,7 @@ function getPlayer(player) {
     `;
       tableBody.appendChild(tr);
     } else {
-      return alert("You can not add more than five players");
+      return false(alert("You can not add more than five players"));
     }
   }
 }
